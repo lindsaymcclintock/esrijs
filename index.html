@@ -34,8 +34,9 @@
 
       const basemapGallery = new BasemapGallery({
         view: view,
-        source: [Basemap.fromId("gray-vector"), Basemap.fromId("hybrid")]
+        basemaps: [Basemap.fromID("gray-vector")]
       });
+
       // Add widget to the top right corner of the view
       view.ui.add(basemapGallery, {
         position: "top-right"
