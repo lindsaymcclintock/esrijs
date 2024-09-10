@@ -26,7 +26,8 @@
       });
 
       const basemapGallery = new BasemapGallery({
-         view: view
+         view: view,
+         container: "basemapGalleryDiv"
       });
     // Add widget to the top right corner of the view
         view.ui.add(basemapGallery, {
@@ -51,5 +52,6 @@
 <body>
   <!--div to display map-->
   <div id="viewDiv"></div>
+  <div id="basemapGalleryDiv"></div>
 </body>
 </html>
