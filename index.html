@@ -7,8 +7,8 @@
   <meta name="description" content="" />
 
   <!--calls for the arcgis api's CSS file and JS library-->
-  <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.25/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.30/"></script>
 
   <!--Adding modules neede for a full screen map app-->
   <script>  
@@ -18,9 +18,9 @@
       "esri/widgets/Locate",
       "esri/widgets/Search"], 
       function(esriConfig, Map, MapView, Locate, Search) {  
-      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurM9-pAcf23W5yt8y2jTB2KTwD4hT3CaM8-Mvb-G6W0-FIEAVITBc0fA9sB49CJ6o81UaYasfTlrXJxWr69AiS08mLsI7r4WZxAqgeZfo5jE0OqdfTbHl-FoJkVaHMPNYCSGMdiRqZAAJJK_OMZ017gPLHHgP5jSuohD_v3ByE782n4jW753PoHshZJJOm0AiSqkSAwyMCWvOrtWyYAw8ahsscpnn3FMs8dJN0gJWOxWbAT1_0VZxzgI2"
+      esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurM9-pAcf23W5yt8y2jTB2KTwD4hT3CaM8-Mvb-G6W0-FbKKJwDpQ0cTuz8ad9bk85eRHLaCQSOXeTWmVs6KrlSeTmUIV_CeSLZU9iFOgMOm1EZ1v4DRnSZrUX0m2TijzADbCnEfVjEKlR1VxKatOP7TtgtF9pOioiaaa_i8dWQaF1i44srbj6D8QHWP3BuFMF2T7FeUq-Zl0Jj1Vx_pn69Izppz5yf-tiFNC-kd59kQ0AT1_HEBEBKB6"
       const map = new Map({ 
-        basemap: "topo-vector" // Basemap layer service 
+        basemap: "gray-vector" // Basemap layer service 
        });
 
       const view = new MapView({
