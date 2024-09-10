@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, Map!</title>
+  <title>Indiana Fever!</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css" />
   <script src="https://js.arcgis.com/4.30/"></script>
 
-  <!--Adding modules neede for a full screen map app-->
+  <!--Adding modules needed for a full screen map app-->
   <script>  
     require(["esri/config",
      "esri/Map",
@@ -24,7 +24,7 @@
       const map = new Map({ 
         basemap: new Basemap({
           portalItem: {
-            id: "979c6cc89af9449cbeb5342a439c6a76" //light gray canvas basemap
+            id: "fae788aa91e54244b161b59725dcbb2a" //open street map basemap
           }
         }) 
        });
@@ -32,7 +32,7 @@
       const view = new MapView({
         map: map,
         center: [-86.15567, 39.76390], // Longitude, latitude
-        zoom: 16, // Zoom level
+        zoom: 18, // Zoom level
         container: "viewDiv" // Div element
       });
 
