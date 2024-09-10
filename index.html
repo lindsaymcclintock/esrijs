@@ -16,11 +16,10 @@
      "esri/Map",
       "esri/views/MapView",
       "esri/widgets/BasemapGallery",
-      "esri/widgets/BasemapGallery/support/LocalBasemapsSource", 
       "esri/Basemap",
       "esri/widgets/Locate",
       "esri/widgets/Search"], 
-      function(esriConfig, Map, MapView, Basemap, BasemapGallery, LocalBasemapsSource, Locate, Search) {  
+      function(esriConfig, Map, MapView, Locate, Search, Basemap, BasemapGallery) {  
       esriConfig.apiKey = "AAPTxy8BH1VEsoebNVZXo8HurM9-pAcf23W5yt8y2jTB2KTwD4hT3CaM8-Mvb-G6W0-FbKKJwDpQ0cTuz8ad9bk85eRHLaCQSOXeTWmVs6KrlSeTmUIV_CeSLZU9iFOgMOm1EZ1v4DRnSZrUX0m2TijzADbCnEfVjEKlR1VxKatOP7TtgtF9pOioiaaa_i8dWQaF1i44srbj6D8QHWP3BuFMF2T7FeUq-Zl0Jj1Vx_pn69Izppz5yf-tiFNC-kd59kQ0AT1_HEBEBKB6"
       const map = new Map({ 
         basemap: "topo-vector" // Basemap layer service 
@@ -31,19 +30,6 @@
         center: [-86.15567, 39.76390], // Longitude, latitude
         zoom: 16, // Zoom level
         container: "viewDiv" // Div element
-      });
-
-      const basemapGallery = new BasemapGallery({
-        view: view,
-        source: new LocalBasemapsSource({
-          basemaps:["gray-vector", "oceans", "streets-vector"]
-        })
-        
-      });
-
-      // Add widget to the top right corner of the view
-      view.ui.add(basemapGallery, {
-        position: "top-right"
       });
 
       const locateBtn = new Locate({
@@ -62,6 +48,16 @@
       view.ui.add(searchWidget, {
         position: "top-left",
         index: 2
+      });
+
+      const basemapGallery = new BasemapGallery({
+        view: view,
+        source: [Basemap.fromID("arcgis-colored-pencil"), Basemap.fromID("arcgis-newspaper")]
+        });
+        
+      // Add widget to the top right corner of the view
+      view.ui.add(basemapGallery, {
+        position: "top-right"
       });
 
     });  
