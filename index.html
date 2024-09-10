@@ -15,7 +15,7 @@
     require(["esri/config",
      "esri/Map",
       "esri/views/MapView",
-      "esri/widgets/BasemapGallery/support/LocalBasemapsSource",
+      "esri/widgets/BasemapGallery",
       "esri/widgets/BasemapGallery/support/LocalBasemapsSource", 
       "esri/Basemap",
       "esri/widgets/Locate",
@@ -36,7 +36,7 @@
       const basemapGallery = new BasemapGallery({
         view: view,
         source: new LocalBasemapsSource({
-          basemaps: "gray-vector"
+          basemaps:["gray-vector", "oceans", "streets-vector"]
         })
         
       });
