@@ -33,10 +33,9 @@
       });
 
       const basemapGallery = new BasemapGallery({
-         view: view,
-         source: [Basemap.fromID("arcgis-imagery"), Basemap.fromID("arcgis-hybrid"),
-        Basemap.fromID("arcgis-osm"), Basemap.fromID("arcgis-gray"), Basemap.fromID("arcgis-topo")]
+         view: view  
       });
+      
     // Add widget to the top right corner of the view
         view.ui.add(basemapGallery, {
         position: "top-right"
