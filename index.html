@@ -33,7 +33,7 @@
       const view = new MapView({
         map: map,
         center: [-86.15567, 39.76390], // Longitude, latitude
-        zoom: 18, // Zoom level
+        zoom: 17, // Zoom level
         container: "viewDiv" // Div element
       });
 
@@ -55,17 +55,13 @@
         index: 2
       });
 
+      //create basemape gallery with default esri basemaps
       const basemapGallery = new BasemapGallery({
           view: view
         });
 
-        // Add the widget to the top-right corner of the view
-        view.ui.add(basemapGallery, {
-          position: "top-right"
-        });
-
-      // Expand widget to show the Basemap Gallery
-      const expand = new Expand({
+      // Expand widget to show and hide the Basemap Gallery
+      const bgexpand = new Expand({
         view: view,
         content: basemapGallery
       });
